@@ -1,6 +1,6 @@
 # action.yml
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "OAS SDK Generator"
+description: "Generate and publish OAS SDK"
 inputs:
   github_token:
     description: github token for deploy
@@ -8,13 +8,6 @@ inputs:
   spec_location: # id of input
     description: "path of openapi spec file."
     required: true
-outputs:
-  time: # id of output
-    description: "The time we greeted you"
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.who-to-greet }}
-    - "foo"
-    - "bar"
